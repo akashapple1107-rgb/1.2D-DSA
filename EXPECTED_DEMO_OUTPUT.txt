@@ -1,0 +1,36 @@
+EXPECTED OUTPUT, NOT A CAPTURED C++ EXECUTION LOG
+Command after compilation: .\dsu.exe --all
+The following shows the demonstration portion. Test results follow it.
+
+BASIC DSU
+Start: [0, 1, 2, 3, 4], groups=5
+After chain-building merges: [1, 2, 3, 4, 4], groups=1
+find(0) = 4
+After find (no compression): [1, 2, 3, 4, 4], groups=1
+
+OPTIMISED DSU
+Start: [0, 1, 2, 3, 4, 5], groups=6
+unite(0,1): [0, 0, 2, 3, 4, 5], groups=5
+unite(2,3): [0, 0, 2, 2, 4, 5], groups=4
+unite(0,2): [0, 0, 0, 2, 4, 5], groups=3
+find(3) = 0
+After compression: [0, 0, 0, 0, 4, 5], groups=3
+Group size of 3 = 4
+0 and 5 connected? false
+After two more merges: true, groups=1
+Repeat unite(0,5): false, groups=1
+
+KRUSKAL
+0-1 weight 1 ACCEPT
+1-2 weight 2 ACCEPT
+0-2 weight 3 SKIP
+2-3 weight 4 ACCEPT
+3-4 weight 5 ACCEPT
+2-4 weight 6 SKIP
+1-4 weight 7 SKIP
+Selected edges:
+0-1 weight 1
+1-2 weight 2
+2-3 weight 4
+3-4 weight 5
+Total weight = 12, edges = 4, components = 1

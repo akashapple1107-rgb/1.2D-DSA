@@ -1,0 +1,21 @@
+EXPECTED OUTPUT, NOT A CAPTURED C++ EXECUTION LOG
+Command after compilation: .\dsu.exe --tests
+
+PASS: basic chain
+PASS: initial singleton groups
+PASS: duplicate and self merges
+PASS: exact parent trace and compression
+PASS: size-based swap
+PASS: negative size
+PASS: invalid DSU indices
+PASS: empty and one-vertex graphs
+PASS: main MST weight 12
+PASS: disconnected minimum spanning forest
+PASS: equal-weight alternatives
+PASS: negative weights and self loops
+PASS: parallel edges
+PASS: invalid graph endpoints
+PASS: 64-bit total
+PASS: random connectivity compared with BFS
+PASS: random MST compared with exhaustive search
+Tests passed: 17, failed: 0
